@@ -1,0 +1,441 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    font-family: roboto, Arial, serif;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #33373c;
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    align-self: start;
+    border: black 1px solid;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+  }
+  
+.btn-toggle {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-toggle:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
+.btn-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+  }
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 0;
+    min-width: 120px;
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown-menu li:first-child {
+    border-top: none;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+  
+
+.header h1 {
+    grid-column: 2 / 3;
+    margin-left: 2em;
+    text-align: center;
+}
+.header > input {
+    display: flex;
+    align-self: center;
+    gap: 1.8rem;
+    margin-left: auto;
+    margin-right: 10%;
+    width: 200px;
+    border: 2px solid black;
+    font-size: large;
+    padding: 3px;
+} 
+
+.main {
+    display: flex;
+    height: calc(100vh - 82px);
+    position: relative;
+}
+
+.main > button {
+    position: absolute;
+    left: 87%;
+    top: 12px;
+}
+.main .content {
+    flex-grow: 1;
+}
+.main .sidebar {
+    min-width: 250px;
+    border-width: 0 2px 0 0;
+    border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+}
+.main .sidebar ul {
+    list-style: none;
+    padding: 0%;
+    width: 100%;
+    text-align: center;
+    /* centering the sidebar with the main content */
+    margin: 16px 0;
+}
+.main .sidebar li {
+    margin-bottom: 2.5em;
+    width: 100%;
+    background: white;
+    text-decoration: none;
+    color: #007bff;
+    display: inline-block;
+    width: 100%;
+    border-radius: 0.45em;
+    padding: 0.65em 0px;
+    cursor: pointer;
+}
+
+.btn-question {
+    background-color: rgb(81, 144, 223);
+    border: 2px solid black;
+    color: white;
+    padding: 9px 0.5em;
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    cursor: pointer;
+}
+
+.btn-sort {
+    background-color: #ffffff;
+    border: 2px solid black;
+    padding: 4px 0.5em;
+    padding-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.tag-wrapper {
+    display: flex;
+    margin-top: 0.5em;
+    gap: 1em;
+    flex-wrap: wrap;
+    /* max-width: 650px; */
+}
+
+.tag {
+    display: inline-block;
+    background-color: #666;
+    color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 3px 1.2em;
+}
+
+.wrapper,
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3ch;
+    font-size: larger;
+}
+
+.buttons {
+    display: flex;
+    margin-right: 18%;
+}
+
+.buttons button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+.problem-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-content: space-around;
+    border-width: 2px 0;
+    border-style: dashed;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.insert > div:not(:last-child),
+.content div > .problem-container:not(:last-of-type) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+.dynamic {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3ch;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 125px 0 0;
+}
+
+.additional-container-styles{
+    box-shadow: 14px 14px 20px #cde9fe, -14px -14px 20px whitesmoke;
+    background: linear-gradient(#141e30, #243b55);
+    color: white;
+    border-radius: 20px;
+    flex-direction: column;
+    margin: auto;
+    gap: 2em;
+    padding: 6rem;
+}
+
+label {
+    font-size: 1.25rem;
+}
+form > input {
+    padding: 5px;
+    width: 75ch;
+    overflow-wrap: break-word;
+}
+
+input,
+textarea {
+    font-size: 1rem;
+    font-family: roboto, Arial, serif;
+}
+
+#txtText {
+    height: 200px;
+    resize: none;
+    width: 75ch;
+}
+
+.container .footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer > span {
+    color: red;
+    text-align: center;
+    align-self: center;
+}
+
+form > p {
+    margin-left: 1.5ch;
+    font-size: 0.875rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 125px);
+    grid-auto-rows: minmax(75px, auto);
+    gap: 50px;
+    height: 90%;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.tag-box {
+    display: flex;
+    flex-direction: column;
+    border: black 0.175em dashed;
+    text-align: center;
+    justify-content: center;
+    font-size: large;
+}
+
+.error {
+    color: red;
+    font-style: oblique;
+    font-weight: 650;
+}
+
+.paginator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.paginator button {
+    padding: 0 10px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #ddd;
+    border-color: #eee;
+}
+
+.paginator button.active,
+.paginator button:hover {
+    font-weight: 900;
+    border-color: #001f3d;
+    background: #f89b60;
+    color: white;
+}
+
+.upvote,
+.downvote {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    padding: 8px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Define hover styles for upvote button */
+.upvote:hover,
+.upvote:active {
+    background-color: #ff9b73;
+}
+
+/* Define hover styles for downvote button */
+.downvote:hover,
+.downvote:active {
+    background-color: #BBBBFF;
+}
+
+.comment-section input{
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+    width: 100%;
+}
+  
+.comment-section input:focus {
+    outline: none;
+    border-bottom-color: #0077cc;
+}
+
+.comment-section > .paginator button {
+    padding: 0 3px;
+    height: 30px;
+    border: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #ddd;
+    border-color: #eee;
+}
+
+.comment-section > .paginator .btn-paginator{
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.comment-section > .paginator .btn-paginator.active,
+.comment-section > .paginator button:hover
+ {
+    background-color: #0077cc;
+    font-weight: bold;
+    transform: scale(1.3);/* make the active dot bigger */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+.comment-section > .paginator .btn-paginator:focus {
+    outline: none;
+  }
+
+.comment-section > .paginator .btn-paginator::before{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
+.btn-modify {
+    background-color: transparent;
+    border: 2px solid transparent;
+    font-size: 1.2rem;
+    padding: 4px 8px;
+    color: #fff;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+  
+.btn-modify:hover {
+    background-color: #ccc;
+    border-bottom-color: #ff0000;
+}
